@@ -2,12 +2,12 @@
   "name": "api-node-express",
   "version": "1.0.0",
   "description": "Estudo de Api com Node e Express",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/MunrraMT/api-node-express.git",
   "author": "Andre Rodrigues Melgaço dos Santos <dev-asantos@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./src/index.js"
+    "start": "nodemon ./src/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
