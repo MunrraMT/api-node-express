@@ -6,8 +6,13 @@
   "repository": "https://github.com/MunrraMT/api-node-express.git",
   "author": "Andre Rodrigues Melgaço dos Santos <dev-asantos@outlook.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
   }
 }
