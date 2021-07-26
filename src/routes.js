@@ -2,6 +2,7 @@ const express = require('express');
 const routes = express.Router();
 
 let bancoDeDadosSimulado = require('./db/banco-de-dados');
+const randomNumber = require('./utils/random-number');
 
 routes.get('/tasks', (req, res) => {
   return res.json(bancoDeDadosSimulado);
@@ -12,7 +13,7 @@ routes.post('/addtask', (req, res) => {
 
   if (!body) return res.status(400).end();
 
-  const newData = { id: bancoDeDadosSimulado.length, ...body };
+  const newData = { id: randomNumber(), ...body };
   bancoDeDadosSimulado.push(newData);
 
   return res.json(newData);
