@@ -12,9 +12,10 @@ routes.post('/addtask', (req, res) => {
 
   if (!body) return res.status(400).end();
 
-  bancoDeDadosSimulado.push(body);
+  const newData = { id: bancoDeDadosSimulado.length, ...body };
+  bancoDeDadosSimulado.push(newData);
 
-  return res.json(body);
+  return res.json(newData);
 });
 
 routes.delete('/removetask/:id', (req, res) => {
